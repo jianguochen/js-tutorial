@@ -1,0 +1,10 @@
+.slideshow-nav {
+	position: absolute;
+	color: #fff!important;
+	background-color: #000!important;
+	display: inline-block;
+	padding: 8px 16px;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+}

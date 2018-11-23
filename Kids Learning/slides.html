@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>Slide Show Demo</title>
+<head>
+	<link rel="stylesheet" href="css/slideshow.css">
+	<script src="js/slideshow.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="slide1" style="width: 600px;height: 400px;">
+  <img src="imgs/img_snowtops.jpg" style="width: 100%; display: display;">
+  <img src="imgs/img_lights.jpg" style="width: 100%; display: none;">
+  <img src="imgs/img_mountains.jpg" style="width: 100%; display: none;">
+  <img src="imgs/img_forest.jpg" style="width: 100%; display: none;">
+</div>
+
+<script>
+	var slideShow1 = new SlideShow("#slide1");
+	slideShow1.show(0);
+	slideShow1.initNav();
+
+</script>
+</body>
+</html>
