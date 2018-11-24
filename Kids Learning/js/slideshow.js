@@ -11,31 +11,16 @@ function SlideShow(containerSelector) {
 };
 
 SlideShow.prototype.initNav = function() {
-	// We rely on the height and width being set in the container.
-	var rect = this.container.getBoundingClientRect();
- 
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var	top = rect.top + scrollTop;
- 	var	height = this.container.offsetHeight;
- 	var topPosition = top + height / 2;
-
-    var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-    var leftPosition = rect.left + scrollLeft;
-    var rightPosition = leftPosition + this.container.offsetWidth - 45;
-
-
 	var leftDiv = document.createElement("div");
 	leftDiv.classList.add("slideshow-nav");
 	leftDiv.innerHTML = "<-";
-	leftDiv.setAttribute("style", 
-		"left:" + leftPosition + "px;" + "top:" + topPosition + "px;");
+	leftDiv.setAttribute("style", "left: 0%");
 	this.container.appendChild(leftDiv);
 
 	var rightDiv = document.createElement("div");
 	rightDiv.classList.add("slideshow-nav");
 	rightDiv.innerHTML = "->";
-	rightDiv.setAttribute("style", 
-		"left:" + rightPosition + "px;" + "top:" + topPosition + "px;");
+	rightDiv.setAttribute("style", "right: 0%;");
 	this.container.appendChild(rightDiv);
 
 	// Closure here is needed to store the original SlideShow object.
